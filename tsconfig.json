@@ -1,8 +1,14 @@
 {
     "compilerOptions": {
-      "target": "es5",
-      "lib": ["es5", "dom"],
-      "types": ["cypress", "node"]
+      "target": "es6",
+      "lib": ["es6", "dom"],
+      "module": "CommonJS",
+      "outDir": "./dist",
+      "types": ["cypress"]
     },
-    "include": ["**/*/*.ts"]
+    "include": [
+      "cypress/e2e/**/*.ts",
+      "../cypress.d.ts"
+
+  ]
 }
