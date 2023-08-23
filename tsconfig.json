@@ -4,10 +4,10 @@
       "lib": ["es6", "dom"],
       "module": "CommonJS",
       "outDir": "./dist",
-      "types": ["cypress"]
+      "types": ["cypress", "node"]
     },
     "include": [
-      "cypress/e2e/**/*.ts",
+      "cypress/e2e/**/*/*.ts",
       "../cypress.d.ts"
 
   ]
