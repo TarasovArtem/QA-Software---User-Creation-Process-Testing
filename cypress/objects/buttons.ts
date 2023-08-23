@@ -1,4 +1,4 @@
-
+// <reference types="Cypress" />
 
 
 
@@ -15,6 +15,10 @@ class Buttons {
 
     getText() {
         return cy.get(this.selector).invoke('text');
+    }
+
+    getElement() {
+        return cy.get(this.selector);
     }
 
 }
