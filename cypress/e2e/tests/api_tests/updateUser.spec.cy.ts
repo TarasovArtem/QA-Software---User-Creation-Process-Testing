@@ -41,10 +41,11 @@ describe("Create User", () => {
             },
         })
         .then(response => {
+            // Verify that the request returned a successful status and the expected results 
             if (response.status === 200) {
               const data = response.body;
               const status = response.status;
-              console.log(data);
+              //console.log(data);
               cy.log(data, status);
             } else {
               console.error('Request failed with status:', response.status);

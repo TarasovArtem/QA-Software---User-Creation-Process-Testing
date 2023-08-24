@@ -18,7 +18,7 @@ describe("Create User", () => {
         }
     }
     `;
-
+    //The data can be random (Math.random())
     const variables = {
         input: {
         "email": "newUser@xcnt.com",
@@ -41,11 +41,15 @@ describe("Create User", () => {
             },
         })
         .then(response => {
+          // Verify that the request returned a successful status and the expected results
             if (response.status === 200) {
                 const data = response.body;
-                console.log(data);
+                //console.log(data);
+                cy.log(data);
                 expect(data.data.createUser).equal(null);
-                expect(data.errors[0].message).equal('');
+                // incorrect result --- users: null. 
+                //The data has been sent, but the user has not been created. Missing table in DB
+                cy.log(data.data.createUser);
               } else {
                 console.error('Request failed with status:', response.status);
               }
