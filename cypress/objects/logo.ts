@@ -9,7 +9,7 @@ class Logo {
     }
 
     getClick() {
-        cy.get(this.selector).click();
+        return cy.get(this.selector).click();
     }
 
     getElement() {

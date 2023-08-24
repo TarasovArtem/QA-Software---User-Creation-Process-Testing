@@ -10,7 +10,7 @@ class Inputs {
     }
 
     getInput() {
-        return cy.get(this.selector).type('text')
+        return cy.get(this.selector);
     }
 }
 export default Inputs;

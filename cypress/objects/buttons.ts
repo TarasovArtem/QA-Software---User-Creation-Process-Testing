@@ -1,4 +1,4 @@
-// <reference types="Cypress" />
+/// <reference types="Cypress" />
 
 
 
@@ -10,7 +10,7 @@ class Buttons {
     }
 
     getClick() {
-        cy.get(this.selector).click();
+        return cy.get(this.selector).click();
     }
 
     getText() {
