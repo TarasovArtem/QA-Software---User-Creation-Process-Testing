@@ -1,18 +1,15 @@
-
+/// <reference types="Cypress" />
 
 
 class Navigation {
-    
-    mainPage() {
-        return cy.visit('/');
-    }
 
     userPage() {
-        return cy.visit('/user')
+        cy.visit('/user');
+        
     }
 
     createUserPage() {
-        return cy.visit
+        cy.visit('/create')
     }
 }
 export default Navigation;
