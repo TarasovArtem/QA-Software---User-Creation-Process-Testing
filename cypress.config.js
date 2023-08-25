@@ -1,21 +1,23 @@
 const { defineConfig } = require("cypress");
+const fs = require("fs-extra");
+const path = require("path");
+
+const fetchConfigurationByFile = file => {
+const pathOfConfigurationFile = `qa-challenge/cypress/config/cypress.${file}.json`;
+
+  return (
+      file && fs.readJson(path.join(__dirname, "../", pathOfConfigurationFile))
+    );
+};
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl:"http://localhost:80",
-    execTimeout: 300000,
-      defaultCommandTimeout: 60000,
-      pageLoadTimeout: 60000,
-      viewportWidth: 1920,
-      viewportHeight: 1080,
-      requestTimeout: 5000,
-      responseTimeout: 60000,
-      retries: {
-        runMode: 2,
-        openMode: 1
-      },
-      failOnStatusCode: false,
+    
     setupNodeEvents(on, config) {
+      const environment = config.env.configFile || "testEnv";
+      const configurationForEnvironment = fetchConfigurationByFile(environment);
+
+    return configurationForEnvironment || config;
       // implement node event listeners here
     },
   },
