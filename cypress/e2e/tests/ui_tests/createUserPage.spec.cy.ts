@@ -18,7 +18,7 @@ describe("Create User Page",() => {
     const errors = new Errors('mat-error');
     
     beforeEach(() => {
-        navigation.mainPage();
+        navigation.userPage();
     })
 
     it("Should create a user after filling in all fields", () => {
@@ -28,17 +28,27 @@ describe("Create User Page",() => {
         inputs.getInput().eq(2).type('newUser@xcnt.com');
         checkBox.getCheck();
         buttons.getClick();
-
+        
     })
 
     it("Should create a user after filling only two fields", () => {
+
         buttons.getClick();
         inputs.getInput().eq(0).type('Agent');
         inputs.getInput().eq(1).type('007');
-        checkBox.getCheck();
-        //buttons.getClick();
+        //checkBox.getCheck();
+        buttons.getClick();
         errors.getElement().should('contain.text', 'Email is required.')
-        addMatchImageSnapshotCommand();
+    })
+
+    it("Should create a user afte empty fields", () => {
+        buttons.getClick();
+        inputs.getInput().eq(0).should('be.empty');
+        inputs.getInput().eq(1).should('be.empty');
+        inputs.getInput().eq(2).should('be.empty');
+        checkBox.getCheck();
+        buttons.getClick();
+        errors.getElement().should('contain.text', 'Email is required.')
     })
 
 })
