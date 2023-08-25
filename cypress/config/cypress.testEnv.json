@@ -3,8 +3,10 @@
 {
     "baseUrl": "http://localhost:80",
     "env": {
-      "environment": "testEnv"
+      "environment": "testEnv",
+      "graphql": "http://localhost:8080/graphql" 
     },
+
     "execTimeout": 300000,
     "defaultCommandTimeout": 60000,
     "requestTimeout": 20000,
