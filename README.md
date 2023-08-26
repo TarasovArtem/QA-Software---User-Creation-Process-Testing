@@ -38,7 +38,7 @@ By thoroughly testing the user creation process of the Cashcog Software, I aim t
 
 # Test Instructions
 
-## Precondition for Cashcog Software Testing
+## Precondition for QA challenge Software Testing
 
 Before you proceed with testing, make sure that both the backend and frontend of the "QA challenge" Software are properly launched and running.
 
