@@ -34,7 +34,7 @@ Verify that a user can successfully be created using both the GraphQL API and th
 2. Test data will be generated to cover various scenarios.
 
 ## Conclusion:
-By thoroughly testing the user creation process of the Cashcog Software, I aim to ensure that users can seamlessly be created, and their data is correctly stored.
+By thoroughly testing the user creation process of the QA challenge Software, I aim to ensure that users can seamlessly be created, and their data is correctly stored.
 
 # Test Instructions
 
