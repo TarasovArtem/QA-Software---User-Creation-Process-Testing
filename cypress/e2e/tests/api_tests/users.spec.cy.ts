@@ -18,7 +18,7 @@ describe("Users", () => {
     it("Query - Users", () => {
         cy.request({
             method: 'GET',
-            url: 'http://localhost:8080/graphql',
+            url: Cypress.env('graphql'),
             body: {
               query
             },

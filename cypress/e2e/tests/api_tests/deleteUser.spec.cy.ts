@@ -20,7 +20,7 @@ describe("Delete User", () => {
     it("Mutation - Delete User", () => {
         cy.request({
             method: 'POST',
-            url: 'http://localhost:8080/graphql',
+            url: Cypress.env('graphql'),
             headers: {
               'Content-Type': 'application/json',
             },

@@ -34,7 +34,7 @@ describe("Create User", () => {
       
         cy.request({
             method: 'POST',
-            url: 'http://localhost:8080/graphql',
+            url: Cypress.env('graphql'),
             headers: {
               'Content-Type': 'application/json',
             },
@@ -91,7 +91,7 @@ describe("Create User - Empty Data", () => {
   it("Mutation - Create User with empty data", () => {
       cy.request({
           method: 'POST',
-          url: 'http://localhost:8080/graphql',
+          url: Cypress.env('graphql'),
           headers: {
             'Content-Type': 'application/json',
           },
