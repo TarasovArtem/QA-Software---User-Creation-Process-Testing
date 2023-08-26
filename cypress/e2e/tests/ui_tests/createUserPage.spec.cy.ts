@@ -36,12 +36,21 @@ describe("Create User Page",() => {
         buttons.getClick();
         inputs.getInput().eq(0).type('Agent');
         inputs.getInput().eq(1).type('007');
-        //checkBox.getCheck();
         buttons.getClick();
         errors.getElement().should('contain.text', 'Email is required.')
     })
 
-    it("Should create a user afte empty fields", () => {
+    it("Test with missing or incomplete information - missing email", () => {
+        buttons.getClick();
+        inputs.getInput().eq(0).type('Agent');
+        inputs.getInput().eq(1).type('007');
+        inputs.getInput().eq(2).type('newUser');
+        checkBox.getCheck();
+        buttons.getClick();
+        errors.getElement().should('contain.text', 'Please enter a valid email.')
+    })
+
+    it("Test with missing or incomplete information - missing data", () => {
         buttons.getClick();
         inputs.getInput().eq(0).should('be.empty');
         inputs.getInput().eq(1).should('be.empty');
