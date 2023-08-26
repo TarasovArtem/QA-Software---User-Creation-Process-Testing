@@ -38,6 +38,10 @@ By thoroughly testing the user creation process of the Cashcog Software, I aim t
 
 # Test Instructions
 
+## Precondition for Cashcog Software Testing
+
+Before you proceed with testing, make sure that both the backend and frontend of the "QA challenge" Software are properly launched and running.
+
 ## Installation:
 1. Clone the repository: `git clone https://github.com/TarasovArtem/qa-challenge.git`
 2. Install dependencies: `npm install`
@@ -63,5 +67,13 @@ Make sure to navigate to the appropriate folder before running tests.
 Please note that these instructions assume you have Node.js and npm installed on your machine.
 
 For more details and options on running tests, refer to the Cypress documentation.
+
+## Note:
+It's essential to fulfill this precondition before running any tests to ensure accurate and reliable results. Running tests without a properly launched backend and frontend may lead to unexpected failures or inaccurate outcomes.
+
+Please consult the development or deployment documentation for detailed instructions on launching the backend and frontend components of the "QA challenge" Software.
+
+Remember that these instructions may vary based on the specific setup and environment of your testing infrastructure.
+
 
 
