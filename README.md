@@ -1,4 +1,4 @@
-# "QA challenge" Software - User Creation Process Testing
+# QA Software - User Creation Process Testing
 
 ## Objective:
 The objective of this testing is to ensure the smooth and accurate functioning of the user creation process in the "QA challenge" Software, both through its GraphQL API and web interface.
